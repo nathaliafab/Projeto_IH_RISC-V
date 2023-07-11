@@ -1,0 +1,7 @@
+lw x4,1(x0)
+and x5,x4,x1
+sw x5,0(x0)
+lw x6,0(x0)
+add x7,x4,x4
+add x7,x7,x4
+beq x6,x0,-4
