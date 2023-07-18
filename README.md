@@ -39,11 +39,12 @@ Seu objetivo é implementar as instruções restantes listadas abaixo:
 | 17 | `SLT`     |      ❌     |    ❌    |      ❌      |
 | 18 | `XOR`     |      ❌     |    ❌    |      ❌      |
 | 19 | `OR`      |      ❌     |    ❌    |      ❌      |
-| 20 | `HALT`    |      ❌     |    ❌    |      ❌      |
+| 20 | `LUI`     |      ❌     |    ❌    |      ❌      |
+| 21 | `HALT`    |      ❌     |    ❌    |      ❌      |
 
 ### Observações
 
-- As instruções de 1 a 19 são parte oficial do conjunto RV32I. A pseudo-instrução `HALT` é uma instrução usada em linguagens de montagem para **indicar o fim de um programa ou pausar sua execução**. Quando o processador encontra a instrução `HALT`, geralmente é acionada uma ação específica, como inserir zeros (ou outro valor pré-determinado) no pipeline do processador e interromper o contador de programa (PC), impedindo a execução de novas instruções. Essa funcionalidade permite que o programador tenha controle sobre o fluxo do programa, indicando explicitamente quando o programa deve terminar.
+- As instruções de 1 a 20 são parte oficial do conjunto RV32I. A pseudo-instrução `HALT` é uma instrução usada em linguagens de montagem para **indicar o fim de um programa ou pausar sua execução**. Quando o processador encontra a instrução `HALT`, geralmente é acionada uma ação específica, como inserir zeros (ou outro valor pré-determinado) no pipeline do processador e interromper o contador de programa (PC), impedindo a execução de novas instruções. Essa funcionalidade permite que o programador tenha controle sobre o fluxo do programa, indicando explicitamente quando o programa deve terminar.
 
 - Você tem permissão para modificar a implementação do processador como desejar (por exemplo, incluir fios, alterar tamanhos, modificar sinais, remover ou adicionar módulos, etc.), desde que o resultado final continue funcionando como um pipeline e produza os resultados corretos. Suas decisões de projeto devem ser adequadamente documentadas.
 
