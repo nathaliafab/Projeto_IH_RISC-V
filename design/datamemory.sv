@@ -29,8 +29,8 @@ module datamemory #(
   );
 
   always_ff @(*) begin
-    raddress = {{22{1'b0}}, a};
-    waddress = {{22{1'b0}}, {a[8:2], {2{1'b0}}}};
+    raddress = {{22{1'b0}}, a[8:2], {2{1'b0}}};
+    waddress = {{22{1'b0}}, a[8:2], {2{1'b0}}};
     Datain = wd;
     Wr = 4'b0000;
 
