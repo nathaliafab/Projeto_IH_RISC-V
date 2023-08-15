@@ -48,6 +48,26 @@ Seu objetivo é implementar as instruções restantes listadas abaixo:
 
 - Você tem permissão para modificar a implementação do processador como desejar (por exemplo, incluir fios, alterar tamanhos, modificar sinais, remover ou adicionar módulos, etc.), desde que o resultado final continue funcionando como um pipeline e produza os resultados corretos. Suas decisões de projeto devem ser adequadamente documentadas.
 
+## 📁 Estrutura do repositório
+O repositório está organizado da seguinte forma:
+- [`design`](/design): Contém o código-fonte do projeto do processador RISC-V.
+- [`doc`](/doc): Contém mais explicações sobre a implementação do pipeline.
+- [`sim`](/sim): Contém exemplos de arquivos de simulação e seus resultados esperados.
+- [`verif`](/verif): Contém os arquivos de testbench e as instruções de como testar o projeto.
+
+## 📚 Recursos
+- Para iniciar o estudo do conjunto de instruções RISC-V, consulte:
+  - [Manual de Conjunto de Instruções RISC-V Volume I: ISA de Nível de Usuário - Documento Versão 2.2](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
+  - [risc-v isa pages, by msyksphinz](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#)
+
+- Para simular e testar o projeto do processador RISC-V, utilize:
+  - [ModelSim-Intel® FPGAs Standard Edition Software Version 20.1.1](https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html)
+
+- Para verificar os resultados:
+  - Compare seus resultados com os exemplos fornecidos em [`sim`](/sim)
+  - Utilize o simulador CompSim
+  - Utilize o [RISC-V Interpreter, by Cornell University](https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/)
+
 ## 📦 Entrega
 
 A data de entrega do projeto será especificada no Classroom, assim como a quantidade de pessoas por grupo.
@@ -56,8 +76,7 @@ A data de entrega do projeto será especificada no Classroom, assim como a quant
 
 A entrega consiste no link do fork do repositório no GitHub, contendo o código-fonte do projeto e o relatório.
 
-- Faça um fork desse repositório e inclua as alterações necessárias (**todos os integrantes do grupo devem contribuir!**).
-  - Além das implementações, fique à vontade para alterar o README.md como achar melhor.
+- Faça um fork desse repositório e inclua as alterações necessárias.
 
 - O relatório deve estar no formato PDF ou como link de um Google Docs. Ele deve conter:
   - Nome dos integrantes do grupo.
@@ -75,32 +94,6 @@ O relatório não deve ser extenso, mas deve conter todas as informações neces
 A avaliação do projeto será baseada na implementação correta das instruções, nos testes realizados e no funcionamento adequado do processador.
 
 - O projeto será submetido a casos de teste para verificar seu funcionamento, mas o processo de avaliação também levará em conta a qualidade do código e do relatório.
-
-## 📁 Estrutura do repositório
-O repositório está organizado da seguinte forma:
-- [`design`](/design): Contém o código-fonte do projeto do processador RISC-V.
-- [`doc`](/doc): Contém mais explicações sobre a implementação.
-- [`sim`](/sim): Contém os arquivos de simulação e os resultados, para uso nos testes.
-- [`verif`](/verif): Contém os arquivos de testbench e as instruções de como testar o projeto.
-
-## 📚 Recursos
-- Para iniciar o estudo do conjunto de instruções RISC-V, consulte:
-  - [Manual de Conjunto de Instruções RISC-V Volume I: ISA de Nível de Usuário - Documento Versão 2.2](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
-  - [risc-v isa pages, by msyksphinz](https://msyksphinz-self.github.io/riscv-isadoc/html/rvi.html#)
-
-- Para simular e testar o projeto do processador RISC-V, utilize:
-  - [ModelSim-Intel® FPGAs Standard Edition Software Version 20.1.1](https://www.intel.com/content/www/us/en/software-kit/750666/modelsim-intel-fpgas-standard-edition-software-version-20-1-1.html)
-
-- Para verificar os resultados:
-  - Compare seus resultados com os exemplos fornecidos em [`sim`](/sim)
-  - Utilize o simulador CompSim
-  - Utilize o [RISC-V Interpreter, by Cornell University](https://www.cs.cornell.edu/courses/cs3410/2019sp/riscv/interpreter/)
-
-## ❓ Dúvidas
-
-Em caso de dúvidas ou dificuldades, entre em contato com os monitores da disciplina:
-- [joaopmarinho](https://github.com/joaopmarinho)
-- [nathaliafab](https://github.com/nathaliafab)
 
 ## 🐛 Encontrou um bug ou pensou numa melhoria?
 
