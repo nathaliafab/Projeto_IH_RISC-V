@@ -12,7 +12,7 @@
     python3 assembler.py
     ```
 
-4. Se tudo estiver correto, um arquivo chamado `instruction.mif` será gerado no mesmo diretório do script.
+Se tudo estiver correto, um arquivo chamado `instruction.mif` será gerado no mesmo diretório do script.
 
 ## No Repl.it
 
@@ -27,29 +27,23 @@
 
 5. Execute o programa.
 
-6. Se tudo estiver correto, um arquivo chamado `instruction.mif` será gerado e poderá ser baixado no menu lateral do repl.
+Se tudo estiver correto, um arquivo chamado `instruction.mif` será gerado e poderá ser baixado no menu lateral do repl.
 
 # 🧪 Como Testar seu Programa com o Testbench
 
-1. Crie um novo projeto no ModelSim.
+1. Crie um novo projeto vazio no ModelSim.
 
-2. Adicione todos os arquivos da pasta [`design`](design) ao projeto.
-
-3. Adicione arquivo de testbench [`tb_top.sv`](tb_top.sv) ao projeto.
-
-4. Na pasta do projeto, inclua os seguintes arquivos:
+2. Na pasta do projeto, inclua os seguintes arquivos:
     - [compile_verilog](compile_verilog)
     - [runtb_top](runtb_top)
     - instruction.mif
     - data.mif
 
-5. No [compile_verilog](compile_verilog), ajuste o caminho de cada arquivo para o local onde eles estão no seu computador.
+3. No [compile_verilog](compile_verilog), ajuste o caminho de cada arquivo para o local onde eles estão no seu computador.
 
-6. No terminal do ModelSim, execute o seguinte comando:
+4. No terminal do ModelSim, execute o seguinte comando:
     ```shell
     do runtb_top
     ```
 
-7. O processo de compilação e simulação será iniciado, e os resultados serão exibidos no terminal (transcript) do ModelSim.
-
-8. Uma janela de waveform será aberta, mostrando os sinais indicados em [`runtb_top.sv`](runtb_top.sv). Você pode usar essa janela para verificar mais detalhadamente o funcionamento do processador.
+O processo de compilação e simulação será iniciado, e os resultados serão exibidos no terminal (transcript) do ModelSim. Além disso, uma janela de waveform será aberta, mostrando os sinais indicados em [`runtb_top.sv`](runtb_top.sv). Você pode usar essa janela para verificar mais detalhadamente o funcionamento do processador.
