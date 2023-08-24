@@ -17,7 +17,7 @@ addi x7,x0,1
 addi x2,x0,4
 or x4,x2,x0
 lb x6,0(x7)
-add x6,x4,x0
+add x6,x4,x2
 lb x7,0(x6)
 lh x8,0(x6)
 lw x9,0(x6)
@@ -64,7 +64,7 @@ addi x7,x0,1
 addi x2,x0,4
 or x4,x2,x0
 lb x6,0(x7)
-add x6,x4,x0
+add x6,x4,x2
 lbu x7,0(x6)
 lhu x8,0(x6)
 ```
@@ -79,7 +79,7 @@ lhu x8,0(x6)
 65: Memory [  1] read with value: [ffffffff] | [4294967295]
 70: Memory [  1] read with value: [ffffff8f] | [4294967183]
 75: Register [ 6] written with value: [ffffff8f] | [4294967183]
-85: Register [ 6] written with value: [00000004] | [         4]
+85: Register [ 6] written with value: [00000008] | [         8]
 85: Memory [  8] read with value: [ffffff8f] | [4294967183]
 85: Memory [  8] read with value: [000000fb] | [       251]
 95: Register [ 7] written with value: [000000fb] | [       251]
