@@ -18,6 +18,10 @@ module datamemory #(
   logic [31:0] Datain;
   logic [31:0] Dataout;
   logic [ 3:0] Wr;
+  logic [7:0] auxOutS0;
+  logic [7:0] auxInS0;
+  logic [15:0] aux2Out;
+  logic [15:0] aux2In;
 
   Memoria32Data mem32 (
       .raddress(raddress),
@@ -25,6 +29,10 @@ module datamemory #(
       .Clk(~clk),
       .Datain(Datain),
       .Dataout(Dataout),
+      .auxOutS0(auxOutS0),
+      .auxInS0(auxInS0),
+      .aux2In(aux2In),
+      .aux2Out(aux2Out),
       .Wr(Wr)
   );
 
@@ -38,6 +46,13 @@ module datamemory #(
       case (Funct3)
         3'b010:  //LW
         rd <= Dataout;
+	3'b000: //LB
+	rd <= $signed(auxOutS0);
+	3'b100: //LBU
+	rd <= {24'b0, auxOutS0};
+	3'b001:  //LH
+	rd <= $signed(aux2Out);
+
         default: rd <= Dataout;
       endcase
     end else if (MemWrite) begin
@@ -46,6 +61,15 @@ module datamemory #(
           Wr <= 4'b1111;
           Datain <= wd;
         end
+	3'b000: begin // SB
+	  Wr <= 4'b0100;
+          auxInS0 <= $signed(wd);
+        end
+	3'b001: begin //SH
+	  Wr <= 4'b1100;
+	  aux2In <= $signed(wd);
+	end
+
         default: begin
           Wr <= 4'b1111;
           Datain <= wd;

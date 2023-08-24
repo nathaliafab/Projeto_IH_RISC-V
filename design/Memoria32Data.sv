@@ -29,6 +29,10 @@ module Memoria32Data (
     input wire Clk,
     input wire [31:0] Datain,
     output wire [31:0] Dataout,
+    output wire [7:0] auxOutS0,
+    output wire [7:0] auxInS0,
+    output wire [15:0] aux2In,
+    output wire [15:0] aux2Out,
     input wire [3:0] Wr
 );
 
@@ -60,11 +64,15 @@ module Memoria32Data (
   assign Dataout[23:16] = outS2;
   assign Dataout[15:8] = outS1;
   assign Dataout[7:0] = outS0;
+  assign auxOutS0 = outS0;
+  assign aux2Out = Dataout[15:0];
 
   assign inS3 = Datain[31:24];
   assign inS2 = Datain[23:16];
   assign inS1 = Datain[15:8];
   assign inS0 = Datain[7:0];
+  assign auxInS0 = inS0;
+  assign aux2In = Datain[15:0];
 
   //Bancos de memórias (cada banco possui 65536 bytes)
   //0
