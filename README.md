@@ -6,7 +6,7 @@ Este repositório contém os arquivos base para o projeto da disciplina Infraest
 
 ## 📝 Instruções
 
-A tabela abaixo mostra o status das instruções implementadas até o momento:
+As instruções a serem implementadas são as do conjunto RV32I, que é parte oficial do conjunto de instruções RISC-V. A tabela abaixo mostra o status de implementação das instruções no projeto atual:
 
 | # | Instrução | Implementada | Testada | Funcionando |
 |---|-----------|:-----------:|:-------:|:-----------:|
@@ -42,11 +42,7 @@ Seu objetivo é implementar as instruções restantes listadas abaixo:
 | 20 | `LUI`     |      ❌     |    ❌    |      ❌      |
 | 21 | `HALT`    |      ❌     |    ❌    |      ❌      |
 
-### Observações
-
-- As instruções de 1 a 20 são parte oficial do conjunto RV32I. A pseudo-instrução `HALT` é uma instrução usada em linguagens de montagem para **indicar o fim de um programa ou pausar sua execução**. Quando o processador encontra a instrução `HALT`, geralmente é acionada uma ação específica, como inserir zeros (ou outro valor pré-determinado) no pipeline do processador e interromper o contador de programa (PC), impedindo a execução de novas instruções. Essa funcionalidade permite que o programador tenha controle sobre o fluxo do programa, indicando explicitamente quando o programa deve terminar.
-
-- Você tem permissão para modificar a implementação do processador como desejar (por exemplo, incluir fios, alterar tamanhos, modificar sinais, remover ou adicionar módulos, etc.), desde que o resultado final continue funcionando como um pipeline e produza os resultados corretos. Suas decisões de projeto devem ser adequadamente documentadas.
+Você tem permissão para modificar a implementação do processador como desejar (por exemplo, incluir fios, alterar tamanhos, modificar sinais, remover ou adicionar módulos, etc.), desde que o resultado final continue funcionando como um pipeline e produza os resultados corretos.
 
 ## 📁 Estrutura do repositório
 O repositório está organizado da seguinte forma:
@@ -74,26 +70,11 @@ A data de entrega do projeto será especificada no Classroom, assim como a quant
 
 ### Modelo de entrega
 
-A entrega consiste no link do fork do repositório no GitHub, contendo o código-fonte do projeto e o relatório.
+A entrega consiste em um relatório seguindo o modelo disponível [aqui](https://docs.google.com/document/d/116sukTXOizb0bplubUOHhdNBqpwtk3cR4Dwaqg-TO7I/edit?usp=sharing). Não deve ser extenso, mas precisa conter todas as informações descritas para a avaliação do projeto.
 
-- Faça um fork desse repositório e inclua as alterações necessárias.
-
-- O relatório deve estar no formato PDF ou como link de um Google Docs. Ele deve conter:
-  - Nome dos integrantes do grupo.
-  - Link para o fork do repositório no GitHub.
-  - Descrição das escolhas de projeto.
-  - Descrição dos testes realizados.
-  - Resultados obtidos.
-  - Dificuldades encontradas.
-  - Conclusão.
-
-O relatório não deve ser extenso, mas deve conter todas as informações necessárias para a avaliação do projeto.
-
-## 📝 Avaliação
+### Avaliação
 
 A avaliação do projeto será baseada na implementação correta das instruções, nos testes realizados e no funcionamento adequado do processador.
-
-- O projeto será submetido a casos de teste para verificar seu funcionamento, mas o processo de avaliação também levará em conta a qualidade do código e do relatório.
 
 ## 🐛 Encontrou um bug ou pensou numa melhoria?
 
