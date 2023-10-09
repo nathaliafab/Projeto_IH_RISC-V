@@ -18,7 +18,7 @@ module alu#(
             4'b0000:        // AND
                     ALUResult = SrcA & SrcB;
             4'b0010:        // ADD
-                    ALUResult = SrcA + SrcB;
+                    ALUResult = $signed(SrcA) + $signed(SrcB);
             4'b1000:        // Equal
                     ALUResult = (SrcA == SrcB) ? 1 : 0;
             default:
