@@ -37,21 +37,18 @@ In the above example, `tt` represents the simulation time, `x` represents the re
 ---
 
 ```shell
-45: Register [ 7] written with value: [00000001] | [         1]
-55: Register [ 2] written with value: [00000004] | [         4]
-65: Memory [  1] read with value: [xxxxxxxx] | [         x]
-65: Register [ 4] written with value: [00000004] | [         4]
-65: Memory [  1] read with value: [ffffffff] | [4294967295]
-70: Memory [  1] read with value: [ffffff8f] | [4294967183]
-75: Register [ 6] written with value: [ffffff8f] | [4294967183]
-85: Register [ 6] written with value: [00000008] | [         8]
-85: Memory [  8] read with value: [ffffff8f] | [4294967183]
-85: Memory [  8] read with value: [fffffffb] | [4294967291]
-95: Register [ 7] written with value: [fffffffb] | [4294967291]
-95: Memory [  8] read with value: [ffffaafb] | [4294945531]
-105: Register [ 8] written with value: [ffffaafb] | [4294945531]
-105: Memory [  8] read with value: [0001aafb] | [    109307]
-115: Register [ 9] written with value: [0001aafb] | [    109307]
+55: Register [ 7] written with value: [00000001] | [          1]
+65: Register [ 2] written with value: [00000004] | [          4]
+75: Register [ 4] written with value: [00000004] | [          4]
+75: Memory [  1] read with value: [ffffff8f] | [       -113]
+85: Register [ 6] written with value: [ffffff8f] | [       -113]
+95: Register [ 6] written with value: [00000008] | [          8]
+95: Memory [  8] read with value: [fffffffb] | [         -5]
+105: Register [ 7] written with value: [fffffffb] | [         -5]
+105: Memory [  8] read with value: [ffffaafb] | [     -21765]
+115: Register [ 8] written with value: [ffffaafb] | [     -21765]
+115: Memory [  8] read with value: [0001aafb] | [     109307]
+125: Register [ 9] written with value: [0001aafb] | [     109307]
 ```
 
 ## LBU, LHU
@@ -72,17 +69,14 @@ lhu x8,0(x6)
 ### Registers/Memory State after each instruction
 
 ```shell
-45: Register [ 7] written with value: [00000001] | [         1]
-55: Register [ 2] written with value: [00000004] | [         4]
-65: Memory [  1] read with value: [xxxxxxxx] | [         x]
-65: Register [ 4] written with value: [00000004] | [         4]
-65: Memory [  1] read with value: [ffffffff] | [4294967295]
-70: Memory [  1] read with value: [ffffff8f] | [4294967183]
-75: Register [ 6] written with value: [ffffff8f] | [4294967183]
-85: Register [ 6] written with value: [00000008] | [         8]
-85: Memory [  8] read with value: [ffffff8f] | [4294967183]
-85: Memory [  8] read with value: [000000fb] | [       251]
-95: Register [ 7] written with value: [000000fb] | [       251]
-95: Memory [  8] read with value: [0000aafb] | [     43771]
-105: Register [ 8] written with value: [0000aafb] | [     43771]
+55: Register [ 7] written with value: [00000001] | [          1]
+65: Register [ 2] written with value: [00000004] | [          4]
+75: Register [ 4] written with value: [00000004] | [          4]
+75: Memory [  1] read with value: [ffffff8f] | [       -113]
+85: Register [ 6] written with value: [ffffff8f] | [       -113]
+95: Register [ 6] written with value: [00000008] | [          8]
+95: Memory [  8] read with value: [000000fb] | [        251]
+105: Register [ 7] written with value: [000000fb] | [        251]
+105: Memory [  8] read with value: [0000aafb] | [      43771]
+115: Register [ 8] written with value: [0000aafb] | [      43771]
 ```

@@ -30,8 +30,8 @@ In the above example, `tt` represents the simulation time, `x` represents the re
 ---
 
 ```shell
-45: Register [ 1] written with value: [00000008] | [         8]
-55: Register [ 6] written with value: [fffffff8] | [4294967288]
-65: Register [ 7] written with value: [00000008] | [         8]
-75: Register [ 6] written with value: [0000300c] | [     12300]
+55: Register [ 1] written with value: [00000008] | [          8]
+65: Register [ 6] written with value: [fffffff8] | [         -8]
+75: Register [ 7] written with value: [00000008] | [          8]
+85: Register [ 6] written with value: [0000300c] | [      12300]
 ```

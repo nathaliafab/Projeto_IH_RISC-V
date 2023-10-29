@@ -33,12 +33,10 @@ In the above example, `tt` represents the simulation time, `x` represents the re
 ---
 
 ```shell
-45: Memory [  0] written with value: [ffffffff] | [4294967295]
-45: Register [ 7] written with value: [ffffffff] | [4294967295]
-55: Memory [  0] read with value: [xxxxxxxx] | [         x]
-55: Memory [  0] read with value: [ffffaa80] | [4294945408]
-60: Memory [  0] read with value: [ffffffff] | [4294967295]
-65: Register [ 9] written with value: [ffffffff] | [4294967295]
+55: Register [ 7] written with value: [ffffffff] | [         -1]
+55: Memory [  0] written with value: [ffffffff] | [         -1]
+65: Memory [  0] read with value: [ffffffff] | [         -1]
+75: Register [ 9] written with value: [ffffffff] | [         -1]
 ```
 
 ## SB, SH
@@ -58,15 +56,11 @@ lw x8,0(x0)
 ### Registers/Memory State after each instruction
 
 ```shell
-45: Memory [  2] written with value: [00000000] | [         0]
-45: Register [ 7] written with value: [00000000] | [         0]
-55: Memory [  0] read with value: [xxxxxxxx] | [         x]
-55: Memory [  0] read with value: [0000ffff] | [     65535]
-60: Memory [  0] read with value: [ff00aa80] | [4278233728]
-65: Memory [  2] written with value: [00000000] | [         0]
-65: Register [ 9] written with value: [ff00aa80] | [4278233728]
-75: Memory [  0] read with value: [ff00aa80] | [4278233728]
-75: Memory [  0] read with value: [0000ffff] | [     65535]
-80: Memory [  0] read with value: [0000aa80] | [     43648]
-85: Register [ 8] written with value: [0000aa80] | [     43648]
+55: Register [ 7] written with value: [00000000] | [          0]
+55: Memory [  2] written with value: [00000000] | [          0]
+65: Memory [  0] read with value: [ff00aa80] | [  -16733568]
+75: Register [ 9] written with value: [ff00aa80] | [  -16733568]
+75: Memory [  2] written with value: [00000000] | [          0]
+85: Memory [  0] read with value: [0000aa80] | [      43648]
+95: Register [ 8] written with value: [0000aa80] | [      43648]
 ```
