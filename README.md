@@ -47,7 +47,7 @@ Você tem permissão para modificar a implementação do processador como deseja
 ## 📁 Estrutura do repositório
 O repositório está organizado da seguinte forma:
 - [`design`](/design): Contém o código-fonte do projeto do processador RISC-V.
-- [`doc`](/doc): contém explicações adicionais sobre a implementação do pipeline. Veja também o [resuminho.pdf](https://github.com/nathaliafab/Projeto_IH_RISC-V/blob/main/doc/resuminho.pdf), que serve como guia inicial para começar o projeto.
+- [`doc`](/doc): Contém explicações adicionais sobre a implementação do pipeline. Veja também o [resuminho.pdf](https://github.com/nathaliafab/Projeto_IH_RISC-V/blob/main/doc/resuminho.pdf), que serve como guia inicial para começar o projeto.
 - [`sim`](/sim): Contém exemplos de arquivos de simulação e seus resultados esperados.
 - [`verif`](/verif): Contém os arquivos de testbench e as instruções de como testar o projeto.
 
